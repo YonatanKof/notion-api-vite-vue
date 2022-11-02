@@ -1,7 +1,24 @@
-# Vue 3 + Vite
+# Vite + Vue 3 + Netlify + Notion API
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### Using a Notion database to show content online 
 
-## Recommended IDE Setup
+Get to know this project using this links
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- [Link to the **Notion database**](https://yonatankof.notion.site/168ba015b31f435cb21ba71c3fc11af1?v=fdeb68cce79947fab024ef4572f99df0)
+- [Link to the **how-to-guide**](https://yonatankof.notion.site/Notion-API-a915784104814d00841f20c7593575ad)
+- [Link to the **live site**](https://wonderful-pika-da3272.netlify.app/)
+
+### Get this project running
+
+- Clone
+- NPM install
+- Push to Github/Gitlab
+- Push to netlify
+- Update your *Environment variables*
+  - The [*Internal Integration Token*](https://developers.notion.com/docs#step-1-create-an-integration)
+  - The [*Database ID*](https://developers.notion.com/docs#step-2-share-a-database-with-your-integration)
+- Use `netlify dev` to run localhost 
+- Enjoy 🥳
+
+
+
