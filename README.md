@@ -7,7 +7,7 @@ Built w/ Vite, Vue 3 & Netlify
 Get to know this project using these links
 
 - [Link to the **Notion database**](https://yonatankof.notion.site/168ba015b31f435cb21ba71c3fc11af1?v=fdeb68cce79947fab024ef4572f99df0)
-- [Link to the **how-to-guide**](https://yonatankof.notion.site/Notion-API-a915784104814d00841f20c7593575ad)
+- [Link to the **how-to-guide**](https://yonatankof.notion.site/Working-w-Notion-API-df486e2d39394747842e10aa18e86569)
 - [Link to the **live site**](https://notion-api-vite-vue.netlify.app/)
 
 ### Get this project running
