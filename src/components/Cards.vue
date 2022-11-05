@@ -6,6 +6,11 @@ const itemData = ref([]);
 const getData = async () => {
 	return fetch("/api/fetchNotion").then((res) => res.json());
 };
+const kebabCase = (str) =>
+	str
+		.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+		.join("-")
+		.toLowerCase();
 
 onMounted(() => {
 	getData().then((data) => {
@@ -20,6 +25,10 @@ onMounted(() => {
 			<h1 class="title">{{ item.properties.Name.title[0].plain_text }}</h1>
 			<img :src="item.properties.Image.files[0].file.url" :alt="item.properties.Alt.formula.string" />
 			<p>{{ item.properties.Description.rich_text[0].plain_text }}</p>
+			<router-link :to="kebabCase(item.properties.Name.title[0].plain_text)">
+				<button>View Symbol</button>
+			</router-link>
+			<!-- <a :href="item.url">{{ item.properties.a_text.formula.string }}</a> -->
 		</article>
 	</main>
 </template>

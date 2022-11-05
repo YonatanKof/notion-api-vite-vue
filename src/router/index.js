@@ -4,8 +4,9 @@ import Symbol from '../pages/Symbol.vue'
 
 const routes = [
     { path: '/', name: 'Home', component: Home },
-    { path: '/symbol', name: 'Symbol', component: Symbol }
+    { path: '/:id', name: 'Symbol', component: Symbol },
 ]
+
 
 const router = createRouter({
     history: createWebHistory(),
