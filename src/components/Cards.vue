@@ -17,6 +17,7 @@ onMounted(() => {
 		itemData.value = data.response.results;
 	});
 });
+
 </script>
 
 <template>
@@ -25,10 +26,12 @@ onMounted(() => {
 			<h1 class="title">{{ item.properties.Name.title[0].plain_text }}</h1>
 			<img :src="item.properties.Image.files[0].file.url" :alt="item.properties.Alt.formula.string" />
 			<p>{{ item.properties.Description.rich_text[0].plain_text }}</p>
-			<router-link :to="kebabCase(item.properties.Name.title[0].plain_text)">
-				<button>View Symbol</button>
+			<router-link :to="item.id">
+				<button>Check out the {{ item.properties.Name.title[0].plain_text }} symbol</button>
 			</router-link>
-			<!-- <a :href="item.url">{{ item.properties.a_text.formula.string }}</a> -->
+			<!-- <router-link :to="kebabCase(item.properties.Name.title[0].plain_text)">
+				<button>View Symbol</button>
+			</router-link> -->
 		</article>
 	</main>
 </template>

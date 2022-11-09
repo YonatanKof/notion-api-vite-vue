@@ -1,21 +1,27 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { NotionRenderer, getPageBlocks } from "vue3-notion";
+import { ref, onMounted } from "vue";
+import { useRoute } from "vue-router";
 
-const itemData = ref([]);
+// const pageId = "e29cfe4a51344770a9b0014352e6b5ef";
+const route = useRoute();
+const pageId = route.params.symbolId.toString();
 
-const getData = async () => {
-	return fetch("/api/fetchNotionPage").then((res) => res.json());
-};
+const data = ref();
 
-onMounted(() => {
-	getData().then((data) => {
-		itemData.value = data.pageMD;
-	});
+onMounted(async () => {
+	data.value = await getPageBlocks(pageId);
 });
 </script>
 
 <template>
 	<h1>Symbol</h1>
-	<h2>{{ $route.params.symbol }}</h2>
-	<code v-for="item in itemData">{{ item }}</code>
+	<!-- <h2>{{ pageId }}</h2> -->
+	<NotionRenderer v-if="data" :blockMap="data" fullPage />
+	<!-- <h2>{{ $route.params.symbol }}</h2> -->
+	<!-- <code v-for="item in itemData">{{ item }}</code> -->
 </template>
+
+<!-- <style>
+@import "vue3-notion/dist/style.css"; /* optional Notion-like styles */
+</style> -->

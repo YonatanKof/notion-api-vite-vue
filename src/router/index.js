@@ -4,7 +4,7 @@ import Symbol from '../Pages/Symbol.vue'
 
 const routes = [
     { path: '/', name: 'Home', component: Home },
-    { path: '/:symbol', name: 'Symbol', component: Symbol },
+    { path: '/:symbolId', name: 'Symbol', component: Symbol },
 ]
 
 
