@@ -1,9 +1,9 @@
 <script setup>
-import Cards from "./components/Cards.vue";
+
 </script>
 
 <template>
-	<Cards />
+	<router-view></router-view>
 </template>
 
 <style scoped>

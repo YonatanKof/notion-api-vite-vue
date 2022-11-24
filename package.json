@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "@notionhq/client": "^2.2.1",
-    "vue": "^3.2.41"
+    "notion-to-md": "^2.5.5",
+    "vue": "^3.2.41",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.2.0",
     "netlify-cli": "^12.0.11",
-    "vite": "^3.2.0"
+    "vite": "^3.2.0",
+    "vue3-notion": "^0.1.36"
   }
 }

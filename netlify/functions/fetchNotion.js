@@ -19,6 +19,13 @@ exports.handler = async function (event, context) {
 					equals: true,
 				},
 			},
+			sorts: [
+				{
+					property: "Order",
+					direction: "ascending",
+					// direction: "descending",
+				},
+			],
 		});
 
 		return {
