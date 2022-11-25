@@ -15,13 +15,12 @@ onMounted(async () => {
 </script>
 
 <template>
-	<h1>Symbol</h1>
-	<!-- <h2>{{ pageId }}</h2> -->
+	<router-link to="/">
+		<button>Back to homepage</button>
+	</router-link>
 	<NotionRenderer v-if="data" :blockMap="data" fullPage />
-	<!-- <h2>{{ $route.params.symbol }}</h2> -->
-	<!-- <code v-for="item in itemData">{{ item }}</code> -->
 </template>
 
-<!-- <style>
+<style>
 @import "vue3-notion/dist/style.css"; /* optional Notion-like styles */
-</style> -->
+</style>

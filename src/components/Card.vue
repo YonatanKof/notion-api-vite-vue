@@ -28,6 +28,7 @@ const kebabCase = (str) =>
 
 <style scoped>
 article {
+	text-align: center;
 	background-color: bisque;
 	color: firebrick;
 	border-radius: 0.5rem;
