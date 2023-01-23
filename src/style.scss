@@ -1,12 +1,18 @@
 :root {
 	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 1.2;
 	font-weight: 400;
+	--color-system-100: hsl(0, 0%, 5%);
+	--color-system-80: hsl(0, 0%, 20%);
+	--color-system-60: hsl(0, 0%, 35%);
+	--color-system-40: hsl(0, 0%, 50%);
+	--color-system-invert-100: hsl(0, 0%, 99%);
+	--color-system-invert-80: hsl(0, 0%, 92.5%);
 
 	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
+	color: var(--color-system-100);
+	background-color: var(--color-system-invert-80);
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -15,23 +21,23 @@
 	-webkit-text-size-adjust: 100%;
 }
 
-a {
-	font-weight: 500;
-	color: #646cff;
-	text-decoration: inherit;
-}
-a:hover {
-	color: #535bf2;
-}
+// a {
+// 	font-weight: 500;
+// 	color: #646cff;
+// 	text-decoration: inherit;
+// }
+// a:hover {
+// 	color: #535bf2;
+// }
 
-a {
-	font-weight: 500;
-	color: #646cff;
-	text-decoration: inherit;
-}
-a:hover {
-	color: #535bf2;
-}
+// a {
+// 	font-weight: 500;
+// 	color: #646cff;
+// 	text-decoration: inherit;
+// }
+// a:hover {
+// 	color: #535bf2;
+// }
 
 body {
 	margin: 0;
@@ -39,23 +45,28 @@ body {
 	min-height: 100vh;
 }
 
-button {
+.btn {
+	background-color: var(--color-system-invert-100);
+	color: var(--color-system-100);
 	border-radius: 8px;
-	border: 1px solid transparent;
+	border: 2px solid var(--color-system-40);
 	padding: 0.6em 1.2em;
 	font-size: 1em;
 	font-weight: 500;
 	font-family: inherit;
-	background-color: #1a1a1a;
+	transform: translateY(-0.25rem);
+	box-shadow: 0 0.5rem 0 var(--color-system-40);
 	cursor: pointer;
-	transition: border-color 0.25s;
-}
-button:hover {
-	border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
+	transition: all 0.2s;
+	&:hover {
+		transform: translateY(0);
+		box-shadow: 0 0.25rem 0 var(--color-system-80);
+		border-color: var(--color-system-80);
+	}
+	&:focus,
+	&:focus-visible {
+		outline: 4px auto -webkit-focus-ring-color;
+	}
 }
 
 #app {
@@ -63,15 +74,13 @@ button:focus-visible {
 	max-width: 1280px;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
 	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
-	a:hover {
-		color: #747bff;
-	}
-	button {
-		background-color: #f9f9f9;
+		--color-system-100: hsl(0, 0%, 95%);
+		--color-system-80: hsl(0, 0%, 80%);
+		--color-system-60: hsl(0, 0%, 60%);
+		--color-system-40: hsl(0, 0%, 40%);
+		--color-system-invert-100: hsl(0, 0%, 4%);
+		--color-system-invert-80: hsl(0, 0%, 12%);
 	}
 }
