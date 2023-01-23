@@ -26,7 +26,22 @@ body {
 	min-width: 320px;
 	min-height: 100vh;
 }
-
+#app {
+	margin: 0 auto;
+	max-width: 1024px;
+}
+main {
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	@media (max-width: 880px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: 520px) {
+		grid-template-columns: 1fr;
+	}
+}
 .btn {
 	background-color: var(--color-system-invert-100);
 	color: var(--color-system-80);
@@ -56,28 +71,28 @@ body {
 	}
 }
 
-#app {
-	margin: 0 auto;
-	max-width: 1280px;
-}
 article {
 	text-align: center;
 	background-color: var(--color-system-invert-100);
 	border-radius: 0.5rem;
-	padding: 1rem 2rem 3rem;
+	padding: 1rem 2rem 2.25rem;
 }
 img {
+	border-radius: 0.5rem;
 	width: 100%;
-	max-width: 20rem;
+	max-width: 16rem;
+	filter: grayscale(75%) brightness(1);
+	background-color: var(--color-system-invert-80);
 }
 p {
-	margin-block-end: 2rem;
+	margin-block-end: 1.5rem;
 }
 .title {
 	font-size: 1.5rem;
 	line-height: 1.25;
 }
 @media (prefers-color-scheme: dark) {
+	// This is the dark mode
 	:root {
 		--color-system-100: hsl(0, 0%, 95%);
 		--color-system-80: hsl(0, 0%, 80%);
@@ -85,5 +100,8 @@ p {
 		--color-system-40: hsl(0, 0%, 40%);
 		--color-system-invert-100: hsl(0, 0%, 4%);
 		--color-system-invert-80: hsl(0, 0%, 10%);
+	}
+	img {
+		filter: grayscale(50%) brightness(0.65);
 	}
 }

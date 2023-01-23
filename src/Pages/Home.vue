@@ -28,12 +28,3 @@ onMounted(() => {
 		/>
 	</main>
 </template>
-
-<style scoped>
-main {
-	padding: 2rem;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem;
-}
-</style>
