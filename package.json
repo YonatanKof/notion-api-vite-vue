@@ -17,6 +17,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.2.0",
     "netlify-cli": "^12.0.11",
+    "sass": "^1.57.1",
     "vite": "^3.2.0",
     "vue3-notion": "^0.1.36"
   }
