@@ -20,26 +20,8 @@ const kebabCase = (str) =>
 		<h1 class="title">{{ title }}</h1>
 		<img :src="imgSrc" :alt="imgAlt" />
 		<p>{{ desc }}</p>
-		<router-link :to="thisPageId">
-			<button>Check out the {{ title }} symbol</button>
-		</router-link>
+		<div class="btn">
+			<router-link :to="thisPageId"> Check out the {{ title }} symbol </router-link>
+		</div>
 	</article>
 </template>
-
-<style scoped>
-article {
-	text-align: center;
-	background-color: bisque;
-	color: firebrick;
-	border-radius: 0.5rem;
-	padding: 2rem;
-}
-img {
-	width: 100%;
-	max-width: 20rem;
-}
-.title {
-	font-size: 1.5rem;
-	line-height: 1.25;
-}
-</style>
