@@ -21,7 +21,7 @@ const kebabCase = (str) =>
 		<img :src="imgSrc" :alt="imgAlt" />
 		<p>{{ desc }}</p>
 		<div class="btn">
-			<router-link :to="thisPageId"> Check out the {{ title }} symbol </router-link>
+			<router-link :to="thisPageId"> Check out the <strong>{{ title }}</strong> symbol </router-link>
 		</div>
 	</article>
 </template>

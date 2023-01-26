@@ -1,5 +1,6 @@
 :root {
-	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+	// font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 	font-size: 16px;
 	line-height: 1.2;
 	font-weight: 400;
@@ -7,6 +8,7 @@
 	--color-system-80: hsl(0, 0%, 15%);
 	--color-system-60: hsl(0, 0%, 35%);
 	--color-system-40: hsl(0, 0%, 50%);
+	--color-system-20: hsl(0, 0%, 75%);
 	--color-system-invert-100: hsl(0, 0%, 99%);
 	--color-system-invert-80: hsl(0, 0%, 90%);
 
@@ -19,6 +21,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
+	@media (max-width: 560px) {
+		font-size: 18px;
+	}
 }
 
 body {
@@ -38,7 +43,7 @@ main {
 	@media (max-width: 880px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	@media (max-width: 520px) {
+	@media (max-width: 560px) {
 		grid-template-columns: 1fr;
 	}
 }
@@ -48,7 +53,7 @@ main {
 	border-radius: 8px;
 	border: 2px solid var(--color-system-40);
 	padding: 0.6em 1.2em;
-	font-size: 1em;
+	font-size: 0.875rem;
 	font-weight: 500;
 	font-family: inherit;
 	transform: translateY(-0.25rem);
@@ -75,12 +80,13 @@ article {
 	text-align: center;
 	background-color: var(--color-system-invert-100);
 	border-radius: 0.5rem;
-	padding: 1rem 2rem 2.25rem;
+	padding: 1.25rem 1.5rem 1.75rem;
+	box-shadow: 0 0.25rem 0 var(--color-system-20);
 }
 img {
 	border-radius: 0.5rem;
 	width: 100%;
-	max-width: 16rem;
+	// max-width: 20rem;
 	filter: grayscale(75%) brightness(1);
 	background-color: var(--color-system-invert-80);
 }
@@ -90,6 +96,8 @@ p {
 .title {
 	font-size: 1.5rem;
 	line-height: 1.25;
+	margin: 0;
+	margin-block-end: 1.25rem;
 }
 @media (prefers-color-scheme: dark) {
 	// This is the dark mode
@@ -98,6 +106,7 @@ p {
 		--color-system-80: hsl(0, 0%, 80%);
 		--color-system-60: hsl(0, 0%, 60%);
 		--color-system-40: hsl(0, 0%, 40%);
+		--color-system-20: hsl(0, 0%, 20%);
 		--color-system-invert-100: hsl(0, 0%, 4%);
 		--color-system-invert-80: hsl(0, 0%, 10%);
 	}
