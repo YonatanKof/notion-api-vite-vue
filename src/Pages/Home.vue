@@ -3,20 +3,22 @@ import { onMounted, ref } from "vue";
 import Card from "../components/Card.vue";
 
 const itemData = ref([]);
+const dbMetadata = ref([]);
 
 const getData = async () => {
 	return fetch("/api/fetchNotion").then((res) => res.json());
 };
 
 onMounted(() => {
-	
 	getData().then((data) => {
+		dbMetadata.value = data.dbResponse;
 		itemData.value = data.response.results;
 	});
 });
 </script>
 
 <template>
+	<h1>{{ dbMetadata.title && dbMetadata.title[0] && dbMetadata.title[0].plain_text}}</h1>
 	<main>
 		<Card
 			v-for="item in itemData"
