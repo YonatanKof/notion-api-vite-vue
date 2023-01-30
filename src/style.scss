@@ -34,9 +34,9 @@ body {
 #app {
 	margin: 0 auto;
 	max-width: 1024px;
+	padding: 2rem;
 }
 main {
-	padding: 2rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 2rem;
@@ -86,10 +86,11 @@ article {
 img {
 	border-radius: 0.5rem;
 	width: 100%;
-	// max-width: 20rem;
+	min-height: 4rem;
 	filter: grayscale(75%) brightness(1);
 	background-color: var(--color-system-invert-80);
-}
+	color: var(--color-system-60);
+	font-size: small;}
 p {
 	margin-block-end: 1.5rem;
 }
@@ -98,6 +99,19 @@ p {
 	line-height: 1.25;
 	margin: 0;
 	margin-block-end: 1.25rem;
+}
+.main-title {
+	font-size: 1.75rem;
+	line-height: 1.25;
+	margin: 0;
+	margin-block-end: 1rem;
+}
+.sub-title {
+	font-size: 1rem;
+	line-height: 1.25;
+	margin: 0;
+	margin-block-end: 1.5rem;
+	font-weight: normal;
 }
 @media (prefers-color-scheme: dark) {
 	// This is the dark mode
