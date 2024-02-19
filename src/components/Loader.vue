@@ -13,8 +13,8 @@ h1 {
 .this-bg {
 	width: 100%;
 	height: 32rem;
-	height: 80dvh;
-	background-color: var(--color-system-20);
+	height: 85dvh;
+	background: var(--color-system-invert-100);
 	display: flex;
 	justify-content: center;
 	align-items: center;
