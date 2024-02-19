@@ -1,6 +1,4 @@
 <script setup>
-import Symbol from "../Pages/Symbol.vue";
-
 const props = defineProps({
 	title: String,
 	imgSrc: String,
@@ -11,7 +9,7 @@ const props = defineProps({
 const kebabCase = (str) =>
 	str
 		.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-		.join("-")
+		.join('-')
 		.toLowerCase();
 </script>
 
@@ -21,7 +19,14 @@ const kebabCase = (str) =>
 		<img :src="imgSrc" :alt="imgAlt" />
 		<p>{{ desc }}</p>
 		<div class="btn">
-			<router-link :to="thisPageId"> Check out the <strong>{{ title }}</strong> symbol </router-link>
+			<router-link :to="thisPageId">
+				Check out the <strong>{{ title }}</strong> symbol
+			</router-link>
 		</div>
 	</article>
 </template>
+<style scoped>
+img {
+	aspect-ratio: 3/2;
+}
+</style>
