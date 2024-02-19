@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import Card from '../components/Card.vue';
+import Loader from '../components/Loader.vue';
 
 const itemData = ref([]);
 const dbMetadata = ref([]);
@@ -41,5 +42,5 @@ onMounted(() => {
 			/>
 		</main>
 	</div>
-	<div v-else><h1>Loading...</h1></div>
+	<Loader v-else />
 </template>
