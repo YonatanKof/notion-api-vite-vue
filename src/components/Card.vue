@@ -1,22 +1,39 @@
+<script setup>
+import { UnLazyImage } from '@unlazy/vue/components';
+const props = defineProps({
+	title: String,
+	imgSrc: String,
+	imgAlt: String,
+	desc: String,
+	thisPageId: String,
+});
+const kebabCase = (str) =>
+	str
+		.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+		.join('-')
+		.toLowerCase();
+</script>
+
 <template>
-	<article>
-		<h1 class="title">Connector</h1>
-		<img src="../assets/Connector.png" alt="flow chart item" />
-		<p>A jump from one point to another</p>
+	<article :this-symbol-page-id="thisPageId">
+		<h1 class="title">{{ title }}</h1>
+		<!-- <img :src="imgSrc" :alt="imgAlt" /> -->
+		<UnLazyImage
+			thumbhash="tMeBBIA2OJd4h4B/iHMIOHdwgXWIB6h4Bg"
+			:src="imgSrc"
+			:alt="imgAlt"
+			auto-sizes
+		/>
+		<p>{{ desc }}</p>
+		<div class="btn">
+			<router-link :to="thisPageId">
+				Check out the <strong>{{ title }}</strong> symbol
+			</router-link>
+		</div>
 	</article>
 </template>
-
 <style scoped>
-article {
-	background-color: bisque;
-    color: firebrick;
-    border-radius: 0.5rem;
-    width: 100%;
-}
 img {
-	max-width: 16rem;
-}
-.title{
-    font-size: 2rem;
+	aspect-ratio: 3/2;
 }
 </style>

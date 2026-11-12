@@ -1,0 +1,12 @@
+[dev]
+    targetPort = 5173
+[[redirects]]
+    from = "/api/*"
+    to = "/.netlify/functions/:splat"
+    status = 200
+[[headers]]
+    for = "/*"
+    [headers.values]
+        cache-control = '''
+        max-age=604800,
+        must-revalidate'''

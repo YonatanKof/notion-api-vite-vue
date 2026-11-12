@@ -1,23 +1,12 @@
 <script setup>
-import Card from "./components/Card.vue";
+
 </script>
 
 <template>
-	<main>
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-	</main>
+	<router-view></router-view>
 </template>
 
 <style scoped>
-main{
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
 .logo {
 	height: 6em;
 	padding: 1.5em;
